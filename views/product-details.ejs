@@ -7,16 +7,28 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
-<body class="bg-warning">
-    <h1><%= name %> </h1>
-    <img src="/images/<%= imageUrl %>" alt="" width="100">
-    <p> <%= price %></p>
-    <p>
-        <% if (isActive) { %>
-            <span>ürün satışta</span>
-        <% } else { %>
-            <span>ürün satışta değil</span>
-        <% 
-           } %></p>
+<body>
+    <%- include('partials/nav') %>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                <div class="card mb-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="/images/<%= urun.imageUrl%>" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= urun.name %></h5>
+                                <p class="card-text"><%= urun.price %></p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci odit ipsam eaque aliquam nulla placeat eius alias! Vitae consectetur iusto deserunt ullam dolores aperiam dignissimos placeat aliquam, magnam, commodi eum.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse possimus quam saepe, vero quae nisi doloremque aut omnis voluptatem nihil necessitatibus quisquam facere, nulla eos culpa. Totam corporis praesentium illo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
